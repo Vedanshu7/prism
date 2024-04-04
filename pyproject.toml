@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "prism"
+version = "0.1.0"
+description = "End-to-end ML pipeline for tabular data"
+requires-python = ">=3.11"
+
+[project.scripts]
+prism = "prism.cli:cli"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
