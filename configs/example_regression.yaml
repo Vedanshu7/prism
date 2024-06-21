@@ -1,0 +1,15 @@
+experiment_name: housing_regression
+data_path: data/housing.csv
+target_column: price
+task: regression
+model: gradient_boosting_regressor
+random_state: 42
+test_size: 0.2
+model_path: outputs/housing_gb.pkl
+
+missing_strategy: median
+encoding: label
+normalize: true
+
+cv_folds: 5
+metric: r2

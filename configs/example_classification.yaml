@@ -1,0 +1,17 @@
+experiment_name: iris_classification
+data_path: data/iris.csv
+target_column: species
+task: classification
+model: random_forest
+random_state: 42
+test_size: 0.2
+model_path: outputs/iris_rf.pkl
+
+# Preprocessing
+missing_strategy: mean
+encoding: label
+normalize: true
+
+# Training
+cv_folds: 5
+metric: f1_weighted
